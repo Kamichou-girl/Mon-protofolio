@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.angular/
+.env
+npm-debug.log*
+yarn-error.log*
+
+# Backend node_modules
+backend/node_modules/
+
+# IDE / OS files
+.vscode/
+.idea/
+*.log
+Thumbs.db
+Desktop.ini
+
+.vercel
+.env*.local

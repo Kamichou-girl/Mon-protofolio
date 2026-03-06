@@ -1,0 +1,18 @@
+<div *ngIf="loading">Chargement des projets...</div>
+
+<div *ngIf="error" class="error">
+  {{ error }}
+</div>
+
+<div *ngIf="!loading && !error" class="projects-list">
+  <div *ngFor="let p of projects" class="project-card">
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.description }}</p>
+    <p><strong>Technologies :</strong> {{ p.technologies.join(', ') }}</p>
+
+    <div class="links">
+      <a *ngIf="p.githubUrl" [href]="p.githubUrl" target="_blank">Code source</a>
+      <a *ngIf="p.demoUrl" [href]="p.demoUrl" target="_blank">Démo</a>
+    </div>
+  </div>
+</div>

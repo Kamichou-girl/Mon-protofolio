@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "title": "Portfolio Angular",
+    "description": "Mon portfolio personnel réalisé avec Angular et déployé sur Netlify.",
+    "technologies": ["Angular", "TypeScript", "SCSS"],
+    "githubUrl": "https://github.com/ton-compte/portfolio-angular",
+    "demoUrl": "https://ton-portfolio.netlify.app"
+  },
+  {
+    "id": 2,
+    "title": "Application Django",
+    "description": "Application web avec authentification et interface d'administration personnalisée.",
+    "technologies": ["Django", "Python", "Bootstrap"],
+    "githubUrl": "https://github.com/ton-compte/projet-django"
+  },
+  {
+    "id": 3,
+    "title": "API Node.js",
+    "description": "Petite API REST déployée sur Render, consommée par le frontend Angular.",
+    "technologies": ["Node.js", "Express"],
+    "githubUrl": "https://github.com/ton-compte/api-node"
+  }
+]
+
