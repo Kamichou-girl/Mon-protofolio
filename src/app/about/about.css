@@ -2,6 +2,14 @@
   align-items: flex-start;
 }
 
+.section__title {
+  color: #a855f7;
+}
+
+.about__meta {
+  border-color: rgba(168, 85, 247, 0.35);
+}
+
 .about__text + .about__text {
   margin-top: 0.9rem;
 }

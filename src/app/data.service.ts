@@ -7,6 +7,7 @@ export interface Project {
   title: string;
   description: string;
   technologies: string[];
+  pointsCle?: string;
   githubUrl?: string;
   demoUrl?: string;
 }

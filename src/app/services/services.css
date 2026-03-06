@@ -2,6 +2,10 @@
   margin-bottom: 1.8rem;
 }
 
+.section__title {
+  color: #22d3ee;
+}
+
 .services__grid {
   display: grid;
   gap: 1.6rem;

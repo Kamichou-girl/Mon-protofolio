@@ -8,20 +8,27 @@
     </div>
 
     <div *ngIf="!error" class="projects__grid">
-      <article *ngFor="let p of projects" class="card projects__card">
+      <article *ngFor="let p of projects; let i = index" class="card projects__card">
         <header class="projects__card-header">
-          <span class="pill" *ngIf="p.technologies?.includes('Angular')">Angular · API REST</span>
-          <h3 class="card__title">{{ p.title }}</h3>
+          <div class="projects__topline">
+            <span class="projects__index">{{ (i + 1) | number: '2.0-0' }}</span>
+            <span class="pill" *ngIf="p.technologies?.includes('Angular')">Angular · API REST</span>
+          </div>
+          <h3 class="projects__title">{{ p.title }}</h3>
         </header>
 
         <p class="card__body">
           {{ p.description }}
         </p>
 
-        <p class="projects__tech">
-          <span>Stack :</span>
-          <span>{{ p.technologies.join(', ') }}</span>
+        <p *ngIf="p.pointsCle" class="projects__key">
+          <span class="projects__key-label">Points clés</span>
+          <span class="projects__key-text">{{ p.pointsCle }}</span>
         </p>
+
+        <div class="projects__tags" aria-label="Technologies du projet">
+          <span *ngFor="let t of p.technologies" class="projects__tag">{{ t }}</span>
+        </div>
 
         <div class="projects__links">
           <a

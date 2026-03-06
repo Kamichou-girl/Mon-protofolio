@@ -3,6 +3,10 @@
   gap: 1.6rem;
 }
 
+.section__title {
+  color: #fb7185;
+}
+
 @media (min-width: 768px) {
   .skills__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -48,7 +52,7 @@
   font-size: 0.85rem;
   font-weight: 600;
   color: #e5e7eb;
-  background: linear-gradient(135deg, #1d4ed8, #38bdf8);
+  background: linear-gradient(135deg, #fb7185, #8b5cf6);
 }
 
 .skills__icon-label {
