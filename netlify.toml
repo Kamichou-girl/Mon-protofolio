@@ -9,3 +9,7 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[plugins]
+  # Désactiver le plugin Angular runtime qui cause des problèmes
+  # "@netlify/angular-runtime" = []
