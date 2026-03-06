@@ -1,1 +1,74 @@
-<p>contact works!</p>
+<section class="section contact">
+  <div class="container contact__grid">
+    <div class="contact__left">
+      <p class="section__title">Contact</p>
+      <h2 class="contact__headline">
+        Un projet en tête&nbsp;?<br />
+        Travaillons <span class="contact__accent">ensemble</span>.
+      </h2>
+      <p class="section__description">
+        Écris‑moi et je te réponds rapidement. Je suis disponible pour des projets web, mobile, API
+        REST et design UI.
+      </p>
+
+      <div class="contact__info card">
+        <div class="contact__row">
+          <span class="contact__icon">✉</span>
+          <div class="contact__row-body">
+            <p class="contact__label">Email</p>
+            <a class="contact__value" [href]="'mailto:' + email">{{ email }}</a>
+          </div>
+        </div>
+        <div class="contact__row">
+          <span class="contact__icon">☎</span>
+          <div class="contact__row-body">
+            <p class="contact__label">Téléphone</p>
+            <a class="contact__value" [href]="'tel:' + phone">{{ phone }}</a>
+          </div>
+        </div>
+        <div class="contact__row">
+          <span class="contact__icon">📍</span>
+          <div class="contact__row-body">
+            <p class="contact__label">Localisation</p>
+            <p class="contact__value">{{ location }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact__socials">
+        <a class="contact__chip" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="contact__chip" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="contact__chip" href="#" target="_blank" rel="noopener noreferrer">Email</a>
+      </div>
+    </div>
+
+    <form class="card contact__form" (submit)="$event.preventDefault()">
+      <div class="contact__form-grid">
+        <label class="contact__field">
+          <span class="contact__field-label">Nom complet</span>
+          <input class="contact__input" type="text" placeholder="Ton nom" />
+        </label>
+
+        <label class="contact__field">
+          <span class="contact__field-label">Email</span>
+          <input class="contact__input" type="email" placeholder="ton@email.com" />
+        </label>
+      </div>
+
+      <label class="contact__field">
+        <span class="contact__field-label">Objet</span>
+        <input class="contact__input" type="text" placeholder="Sujet du message" />
+      </label>
+
+      <label class="contact__field">
+        <span class="contact__field-label">Message</span>
+        <textarea class="contact__input contact__textarea" rows="5" placeholder="Décris ton besoin"></textarea>
+      </label>
+
+      <button class="btn btn--primary contact__submit" type="submit">Envoyer le message</button>
+      <p class="contact__hint">
+        (Formulaire visuel pour l’instant. On peut le connecter à Formspree / Netlify Forms ensuite.)
+      </p>
+    </form>
+  </div>
+</section>

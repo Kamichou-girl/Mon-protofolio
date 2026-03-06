@@ -7,7 +7,6 @@ import { ExperiencePage } from './experience-page/experience-page';
 import { Skills } from './skills/skills';
 import { Contact } from './contact/contact';
 import { Notfound } from './notfound/notfound';
-import { Lunch } from './lunch/lunch';
 
 export const routes: Routes = [
   {
@@ -37,10 +36,6 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: Contact
-  },
-  {
-    path: 'lunch',
-    component: Lunch
   },
   {
     path: 'not-found',

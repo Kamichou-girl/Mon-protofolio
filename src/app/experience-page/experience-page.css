@@ -1,0 +1,49 @@
+.experience__timeline {
+  position: relative;
+  margin-top: 1.5rem;
+  padding-left: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience__timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.35rem;
+  top: 0.15rem;
+  bottom: 0.15rem;
+  width: 2px;
+  background: linear-gradient(to bottom, #1d4ed8, #38bdf8);
+  opacity: 0.6;
+}
+
+.experience__item {
+  position: relative;
+}
+
+.experience__marker {
+  position: absolute;
+  left: -0.15rem;
+  top: 0.8rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: #38bdf8;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2);
+}
+
+.experience__content {
+  margin-left: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .experience__timeline {
+    padding-left: 1rem;
+  }
+
+  .experience__content {
+    margin-left: 0.6rem;
+  }
+}
+

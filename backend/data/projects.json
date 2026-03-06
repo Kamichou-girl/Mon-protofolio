@@ -1,11 +1,12 @@
 [
   {
     "id": 1,
-    "title": "Portfolio Angular",
-    "description": "Mon portfolio personnel réalisé avec Angular et déployé sur Netlify.",
-    "technologies": ["Angular", "TypeScript", "SCSS"],
-    "githubUrl": "https://github.com/ton-compte/portfolio-angular",
-    "demoUrl": "https://ton-portfolio.netlify.app"
+    "title": "Portfolio Angular — Note de module",
+    "description": "Portfolio professionnel développé avec Angular consommant une API Node.js (Render). Sert de projet final pour le module Angular.",
+    "technologies": ["Angular", "TypeScript", "SCSS", "API REST"],
+    "category": "angular",
+    "githubUrl": "https://github.com/Kamichou-girl/Mon-protofolio",
+    "demoUrl": ""
   },
   {
     "id": 2,

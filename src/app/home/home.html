@@ -1,8 +1,48 @@
-<main class="main">
-  <section class="hero">
-    <div class="container">
-      <h1>Bienvenue sur mon Portfolio</h1>
-      <p>Découvrez mes projets et compétences</p>
+<section class="section">
+  <div class="container grid grid--2 home__hero">
+    <div class="home__intro home__intro--animated">
+      <span class="badge">Kouassi Moaye Anne Nissi</span>
+      <h1 class="home__title">
+        Développeuse <span class="home__accent">Fullstack</span>
+      </h1>
+      <p class="home__subtitle">
+        Étudiante en Licence 3 Génie Logiciel à l'Institut Ivoirien de Technologie, curieuse et
+        motivée, qui aime relever des défis techniques pour progresser.
+      </p>
+
+      <div class="home__ticker">
+        <p class="home__ticker-item">Créatrice de contenu et designer passionnée.</p>
+        <p class="home__ticker-item">Développement web, mobile et API REST.</p>
+        <p class="home__ticker-item">Amoureuse de l’art oratoire et de la communication claire.</p>
+      </div>
+
+      <div class="home__actions">
+        <a class="btn btn--primary" routerLink="/projects">
+          Voir mes projets
+        </a>
+        <a class="btn btn--ghost" routerLink="/about">
+          En savoir plus sur moi
+        </a>
+      </div>
+
+      <div class="home__meta">
+        <span class="pill">Licence Génie Logiciel · 2023–2026</span>
+        <span class="pill">Certificat en Intelligence Artificielle</span>
+      </div>
     </div>
-  </section>
-</main>
+
+    <div class="home__hero-visual home__hero-visual--animated">
+      <div class="home__avatar-wrapper">
+        <img
+          src="assets/WhatsApp Image 2026-03-06 at 07.58.59.jpeg"
+          alt="Photo de Kouassi Moaye Anne Nissi"
+          class="home__avatar-img"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="home__scroll-hint">
+    <span>Fais défiler pour découvrir mes projets</span>
+    <span class="home__scroll-dot"></span>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+.about__layout {
+  align-items: flex-start;
+}
+
+.about__text + .about__text {
+  margin-top: 0.9rem;
+}
+
+.about__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.about__list {
+  list-style: none;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.about__list span {
+  margin-right: 0.4rem;
+}
+
+@media (max-width: 767px) {
+  .about__layout {
+    gap: 2.5rem;
+  }
+
+  .about__meta {
+    width: 100%;
+  }
+}
+

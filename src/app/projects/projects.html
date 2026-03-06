@@ -1,18 +1,58 @@
-<div *ngIf="loading">Chargement des projets...</div>
+<section class="section">
+  <div class="container">
+    <p class="section__title">Projets</p>
+    <h2 class="section__subtitle">Mes réalisations principales</h2>
+    <p class="section__description">
+      Voici une sélection de projets issus de mon CV&nbsp;: portfolio Angular, plateforme
+      d’association, application mobile de cantine scolaire et mission de communication digitale à
+      Mumbai.
+    </p>
 
-<div *ngIf="error" class="error">
-  {{ error }}
-</div>
+    <div *ngIf="loading" class="projects__status">
+      Chargement des projets...
+    </div>
 
-<div *ngIf="!loading && !error" class="projects-list">
-  <div *ngFor="let p of projects" class="project-card">
-    <h3>{{ p.title }}</h3>
-    <p>{{ p.description }}</p>
-    <p><strong>Technologies :</strong> {{ p.technologies.join(', ') }}</p>
+    <div *ngIf="error" class="projects__status projects__status--error">
+      {{ error }}
+    </div>
 
-    <div class="links">
-      <a *ngIf="p.githubUrl" [href]="p.githubUrl" target="_blank">Code source</a>
-      <a *ngIf="p.demoUrl" [href]="p.demoUrl" target="_blank">Démo</a>
+    <div *ngIf="!loading && !error" class="projects__grid">
+      <article *ngFor="let p of projects" class="card projects__card">
+        <header class="projects__card-header">
+          <span class="pill" *ngIf="p.technologies?.includes('Angular')">Angular · API REST</span>
+          <h3 class="card__title">{{ p.title }}</h3>
+        </header>
+
+        <p class="card__body">
+          {{ p.description }}
+        </p>
+
+        <p class="projects__tech">
+          <span>Stack :</span>
+          <span>{{ p.technologies.join(', ') }}</span>
+        </p>
+
+        <div class="projects__links">
+          <a
+            *ngIf="p.githubUrl"
+            class="btn btn--ghost"
+            [href]="p.githubUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            *ngIf="p.demoUrl"
+            class="btn btn--primary"
+            [href]="p.demoUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Démo en ligne
+          </a>
+        </div>
+      </article>
     </div>
   </div>
-</div>
+</section>
