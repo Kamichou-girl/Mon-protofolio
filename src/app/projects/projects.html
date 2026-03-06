@@ -2,21 +2,12 @@
   <div class="container">
     <p class="section__title">Projets</p>
     <h2 class="section__subtitle">Mes réalisations principales</h2>
-    <p class="section__description">
-      Voici une sélection de projets issus de mon CV&nbsp;: portfolio Angular, plateforme
-      d’association, application mobile de cantine scolaire et mission de communication digitale à
-      Mumbai.
-    </p>
-
-    <div *ngIf="loading" class="projects__status">
-      Chargement des projets...
-    </div>
 
     <div *ngIf="error" class="projects__status projects__status--error">
       {{ error }}
     </div>
 
-    <div *ngIf="!loading && !error" class="projects__grid">
+    <div *ngIf="!error" class="projects__grid">
       <article *ngFor="let p of projects" class="card projects__card">
         <header class="projects__card-header">
           <span class="pill" *ngIf="p.technologies?.includes('Angular')">Angular · API REST</span>

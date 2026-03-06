@@ -13,6 +13,10 @@ body {
   font-style: italic;
 }
 
+.app-content {
+  touch-action: pan-y;
+}
+
 a {
   color: inherit;
   text-decoration: none;

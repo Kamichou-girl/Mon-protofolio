@@ -30,6 +30,102 @@
   max-width: 36rem;
 }
 
+.home__terminal {
+  max-width: 36rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.22), rgba(2, 6, 23, 0.92));
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.8);
+  overflow: hidden;
+}
+
+.home__terminal-top {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 0.8rem;
+  background: rgba(2, 6, 23, 0.75);
+  border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+}
+
+.home__terminal-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 999px;
+  opacity: 0.9;
+}
+
+.home__terminal-dot--red {
+  background: #fb7185;
+}
+
+.home__terminal-dot--yellow {
+  background: #fbbf24;
+}
+
+.home__terminal-dot--green {
+  background: #34d399;
+}
+
+.home__terminal-title {
+  margin-left: 0.35rem;
+  font-size: 0.78rem;
+  color: rgba(156, 163, 175, 0.85);
+}
+
+.home__terminal-body {
+  padding: 0.85rem 0.95rem;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #e5e7eb;
+  white-space: pre-wrap;
+}
+
+.home__prompt {
+  color: #60a5fa;
+}
+
+.home__cmd {
+  color: #38bdf8;
+}
+
+.home__str {
+  color: #a7f3d0;
+}
+
+.home__ok {
+  color: #34d399;
+  font-weight: 600;
+}
+
+.home__muted {
+  color: rgba(156, 163, 175, 0.9);
+}
+
+.home__accent {
+  color: #e5e7eb;
+}
+
+.home__cursor {
+  display: inline-block;
+  margin-left: 0.2rem;
+  color: #38bdf8;
+  animation: homeBlink 0.95s steps(1) infinite;
+}
+
+@keyframes homeBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
 .home__actions {
   display: flex;
   flex-wrap: wrap;
@@ -159,6 +255,43 @@
   border-radius: 999px;
   background: #38bdf8;
   animation: homeScrollDot 1.3s ease-in-out infinite;
+}
+
+.home__projects-preview {
+  padding-top: 2rem;
+}
+
+.home__projects-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.home__projects-grid {
+  display: grid;
+  gap: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .home__projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.home__project-card {
+  min-height: 100%;
+}
+
+.home__project-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #60a5fa;
+  margin-bottom: 0.35rem;
+}
+
+.home__projects-cta {
+  margin-top: 1.5rem;
 }
 
 @keyframes homeFadeUp {

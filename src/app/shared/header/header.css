@@ -1,0 +1,28 @@
+.header {
+  padding: 0.8rem 0;
+}
+
+.brand__name {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+  .header .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.4rem;
+  }
+
+  .nav__link {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+  }
+}
+
