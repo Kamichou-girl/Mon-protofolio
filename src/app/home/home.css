@@ -56,15 +56,15 @@
 }
 
 .home__terminal-dot--red {
-  background: #fb7185;
+  background: var(--color-primary-soft);
 }
 
 .home__terminal-dot--yellow {
-  background: #fbbf24;
+  background: #1d4ed8;
 }
 
 .home__terminal-dot--green {
-  background: #34d399;
+  background: #0b1120;
 }
 
 .home__terminal-title {
@@ -92,11 +92,11 @@
 }
 
 .home__str {
-  color: #a7f3d0;
+  color: var(--color-primary-soft);
 }
 
 .home__ok {
-  color: #34d399;
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -221,15 +221,7 @@
   inset: -6px;
   border-radius: 2.4rem;
   z-index: 0;
-  background: linear-gradient(
-    90deg,
-    #60a5fa,
-    #a78bfa,
-    #f472b6,
-    #34d399,
-    #fbbf24,
-    #60a5fa
-  );
+  background: linear-gradient(90deg, #0b1120, #1d4ed8, #38bdf8, #0b1120);
   background-size: 400% 100%;
   animation: homeGlowRing 6s linear infinite;
   opacity: 0.85;
@@ -275,8 +267,8 @@
   top: 50%;
   left: 50%;
   margin: -7px 0 0 -7px;
-  background: #a78bfa;
-  color: #a78bfa;
+  background: #1d4ed8;
+  color: #1d4ed8;
   animation-duration: 8s;
   animation-delay: -2s;
 }
@@ -285,8 +277,8 @@
   top: 50%;
   left: 50%;
   margin: -7px 0 0 -7px;
-  background: #f472b6;
-  color: #f472b6;
+  background: #38bdf8;
+  color: #38bdf8;
   animation-duration: 10s;
   animation-delay: -4s;
 }

@@ -4,7 +4,7 @@
 }
 
 .section__title {
-  color: #34d399;
+  color: var(--color-accent);
 }
 
 /* Grille des expériences */
@@ -74,7 +74,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--card-color, #34d399), transparent);
+  background: linear-gradient(90deg, transparent, var(--card-color, var(--color-primary-soft)), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -119,14 +119,13 @@
 }
 
 .experience__type--stage {
-  background: rgba(96, 165, 250, 0.2);
-  color: #60a5fa;
+  background: rgba(37, 99, 235, 0.2);
+  color: var(--color-primary-soft);
 }
 
 .experience__type--projet {
-  background: rgba(167, 139, 250, 0.2);
-  color: #a78bfa;
-}
+  background: rgba(15, 23, 42, 0.8);
+  color: var(--color-primary-soft);
 
 .experience__location {
   font-size: 0.85rem;
@@ -248,8 +247,8 @@
   height: 100%;
   background: linear-gradient(to bottom, 
     transparent 0%, 
-    rgba(52, 211, 153, 0.3) 20%, 
-    rgba(52, 211, 153, 0.3) 80%, 
+    rgba(37, 99, 235, 0.4) 20%, 
+    rgba(37, 99, 235, 0.4) 80%, 
     transparent 100%);
   animation: bgWaveMove 6s ease-in-out infinite;
   border-radius: 1px;
@@ -309,9 +308,9 @@
   }
 }
 
-/* Variables CSS pour les couleurs dynamiques */
-.experience__card[data-index="0"] { --card-color: #60a5fa; }
-.experience__card[data-index="1"] { --card-color: #a78bfa; }
-.experience__card[data-index="2"] { --card-color: #f472b6; }
-.experience__card[data-index="3"] { --card-color: #34d399; }
+/* Variables CSS pour les couleurs dynamiques (toutes en bleu/noir) */
+.experience__card[data-index="0"] { --card-color: var(--color-primary-soft); }
+.experience__card[data-index="1"] { --card-color: #1d4ed8; }
+.experience__card[data-index="2"] { --card-color: #0b1120; }
+.experience__card[data-index="3"] { --card-color: #020617; }
 

@@ -3,7 +3,7 @@
 }
 
 .section__title {
-  color: #22d3ee;
+  color: var(--color-accent);
 }
 
 .services__intro {

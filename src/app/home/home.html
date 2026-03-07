@@ -1,4 +1,4 @@
-<section class="section">
+<section id="home" class="section">
   <div class="container grid grid--2 home__hero">
     <div class="home__intro home__intro--animated">
       <span class="badge">Kouassi Moaye Anne Nissi</span>
@@ -26,7 +26,7 @@
       </div>
 
       <div class="home__actions">
-        <a class="btn btn--ghost" routerLink="/about">
+        <a class="btn btn--ghost" href="#about">
           En savoir plus sur moi
         </a>
       </div>
@@ -46,7 +46,7 @@
           <span class="home__orbit home__orbit--3"></span>
         </div>
         <img
-          src="assets/WhatsApp Image 2026-03-06 at 07.58.59.jpeg"
+          src="assets/profile.png"
           alt="Photo de Kouassi Moaye Anne Nissi"
           class="home__avatar-img"
         />
@@ -64,7 +64,7 @@
     <span>Fais défiler pour découvrir mes projets</span>
     <span class="home__scroll-dot"></span>
   </div>
-</section>
+  </section>
 
 <section class="section home__projects-preview">
   <div class="container">
@@ -101,3 +101,10 @@
 
   </div>
 </section>
+
+<app-about></app-about>
+<app-services></app-services>
+<app-projects></app-projects>
+<app-experience-page></app-experience-page>
+<app-skills></app-skills>
+<app-contact></app-contact>

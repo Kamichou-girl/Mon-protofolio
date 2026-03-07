@@ -1,17 +1,17 @@
 <header class="header">
   <div class="container">
-    <a class="brand" routerLink="/" routerLinkActive="active">
+    <a class="brand" href="#home" (click)="scrollTo('home', $event)">
       <span class="brand__name">Portfolio</span>
     </a>
 
     <nav class="nav">
-      <a class="nav__link" routerLink="/" routerLinkActive="active">Accueil</a>
-      <a class="nav__link" routerLink="/about" routerLinkActive="active">À propos</a>
-      <a class="nav__link" routerLink="/services" routerLinkActive="active">Services</a>
-      <a class="nav__link" routerLink="/projects" routerLinkActive="active">Projets</a>
-      <a class="nav__link" routerLink="/experience" routerLinkActive="active">Expériences</a>
-      <a class="nav__link" routerLink="/skills" routerLinkActive="active">Compétences</a>
-      <a class="nav__link" routerLink="/contact" routerLinkActive="active">Contact</a>
+      <a class="nav__link" href="#home" (click)="scrollTo('home', $event)">Accueil</a>
+      <a class="nav__link" href="#about" (click)="scrollTo('about', $event)">À propos</a>
+      <a class="nav__link" href="#services" (click)="scrollTo('services', $event)">Services</a>
+      <a class="nav__link" href="#projects" (click)="scrollTo('projects', $event)">Projets</a>
+      <a class="nav__link" href="#experience" (click)="scrollTo('experience', $event)">Expériences</a>
+      <a class="nav__link" href="#skills" (click)="scrollTo('skills', $event)">Compétences</a>
+      <a class="nav__link" href="#contact" (click)="scrollTo('contact', $event)">Contact</a>
     </nav>
   </div>
 </header>

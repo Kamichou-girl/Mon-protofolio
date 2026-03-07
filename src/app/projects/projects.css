@@ -5,16 +5,16 @@
 .projects__status {
   margin-top: 1.2rem;
   font-size: 0.95rem;
-  color: #9ca3af;
+  color: var(--color-muted);
   text-align: center;
 }
 
 .section__title {
-  color: #f59e0b;
+  color: var(--color-accent);
 }
 
 .projects__status--error {
-  color: #f97373;
+  color: var(--color-primary-soft);
 }
 
 /* Conteneur des boules */
@@ -167,7 +167,7 @@
   content: '';
   position: absolute;
   inset: -2px;
-  background: radial-gradient(circle at top left, rgba(245, 158, 11, 0.35), transparent 55%);
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.35), transparent 55%);
   opacity: 0;
   transition: opacity 0.18s ease;
 }
@@ -179,7 +179,7 @@
 
 .projects__card:hover {
   transform: translateY(-4px);
-  border-color: rgba(245, 158, 11, 0.35);
+  border-color: rgba(37, 99, 235, 0.5);
   box-shadow: 0 26px 70px rgba(15, 23, 42, 0.85);
 }
 
@@ -189,43 +189,43 @@
 
 /* Couleurs par carte */
 .projects__card--color-1 {
-  border-left: 4px solid #60a5fa;
-  box-shadow: 0 8px 32px rgba(96, 165, 250, 0.2);
+  border-left: 4px solid var(--color-primary-soft);
+  box-shadow: 0 8px 32px rgba(96, 165, 250, 0.25);
 }
 .projects__card--color-1::before {
-  background: radial-gradient(circle at top left, rgba(96, 165, 250, 0.4), transparent 55%);
+  background: radial-gradient(circle at top left, rgba(96, 165, 250, 0.55), transparent 55%);
 }
 
 .projects__card--color-2 {
-  border-left: 4px solid #a78bfa;
-  box-shadow: 0 8px 32px rgba(167, 139, 250, 0.2);
+  border-left: 4px solid #1d4ed8;
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.25);
 }
 .projects__card--color-2::before {
-  background: radial-gradient(circle at top left, rgba(167, 139, 250, 0.4), transparent 55%);
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.5), transparent 55%);
 }
 
 .projects__card--color-3 {
-  border-left: 4px solid #f472b6;
-  box-shadow: 0 8px 32px rgba(244, 114, 182, 0.2);
+  border-left: 4px solid #0b1120;
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.6);
 }
 .projects__card--color-3::before {
-  background: radial-gradient(circle at top left, rgba(244, 114, 182, 0.4), transparent 55%);
+  background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.8), transparent 55%);
 }
 
 .projects__card--color-4 {
-  border-left: 4px solid #34d399;
-  box-shadow: 0 8px 32px rgba(52, 211, 153, 0.2);
+  border-left: 4px solid #1e293b;
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.6);
 }
 .projects__card--color-4::before {
-  background: radial-gradient(circle at top left, rgba(52, 211, 153, 0.4), transparent 55%);
+  background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.8), transparent 55%);
 }
 
 .projects__card--color-5 {
-  border-left: 4px solid #fbbf24;
-  box-shadow: 0 8px 32px rgba(251, 191, 36, 0.2);
+  border-left: 4px solid var(--color-primary);
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.3);
 }
 .projects__card--color-5::before {
-  background: radial-gradient(circle at top left, rgba(251, 191, 36, 0.4), transparent 55%);
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.4), transparent 55%);
 }
 
 .projects__topline {
