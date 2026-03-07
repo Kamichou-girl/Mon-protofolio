@@ -95,6 +95,10 @@ a {
 }
 
 @media (max-width: 767px) {
+  .header {
+    position: static;
+  }
+
   .section {
     padding: 3rem 0;
     scroll-margin-top: 72px;
