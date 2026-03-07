@@ -1,47 +1,54 @@
-<section class="section">
+<section class="section experience__section">
   <div class="container">
     <p class="section__title">Expériences</p>
-    <h2 class="section__subtitle">Les défis qui m’ont fait grandir</h2>
+    <h2 class="section__subtitle">Les défis qui m'ont fait grandir</h2>
 
-    <div class="experience__timeline">
-      <div class="experience__item">
-        <div class="experience__marker"></div>
-        <div class="experience__content card">
-          <h3 class="card__title">Stagiaire en marketing communication digitale internationale</h3>
-          <p class="card__meta">AI University · Mumbai, Inde</p>
-          <p class="card__body">
-            Immersion dans un environnement international, gestion de communication digitale et
-            découverte de la culture tech en Inde. Cette expérience a renforcé mon adaptabilité et
-            mon aisance à travailler en contexte multiculturel.
-          </p>
+    <!-- Design moderne avec cartes animées -->
+    <div class="experience__grid">
+      <div *ngFor="let exp of experiences; let i = index" 
+           class="experience__card"
+           [style.border-left-color]="exp.color"
+           [attr.data-index]="i">
+        
+        <!-- En-tête avec période et type -->
+        <div class="experience__header">
+          <div class="experience__meta">
+            <span class="experience__period">{{ exp.period }}</span>
+            <span class="experience__type" 
+                  [class.experience__type--stage]="exp.type === 'stage'"
+                  [class.experience__type--projet]="exp.type === 'projet'">
+              {{ exp.type === 'stage' ? '🎓 Stage' : '💼 Projet' }}
+            </span>
+          </div>
+          <div class="experience__location">📍 {{ exp.location }}</div>
         </div>
-      </div>
 
-      <div class="experience__item">
-        <div class="experience__marker"></div>
-        <div class="experience__content card">
-          <h3 class="card__title">Application de gestion de cantine</h3>
-          <p class="card__meta">Projet React Native</p>
-          <p class="card__body">
-            Conception et développement d’une application mobile pour gérer les repas, menus et
-            paiements d’une cantine. Focus sur l’expérience utilisateur et la fiabilité des
-            données.
-          </p>
+        <!-- Contenu principal -->
+        <div class="experience__content">
+          <h3 class="experience__title">{{ exp.title }}</h3>
+          <p class="experience__company">{{ exp.company }}</p>
+          <p class="experience__description">{{ exp.description }}</p>
         </div>
-      </div>
 
-      <div class="experience__item">
-        <div class="experience__marker"></div>
-        <div class="experience__content card">
-          <h3 class="card__title">Projet E-association — ONG Crechendo Vie</h3>
-          <p class="card__meta">Plateforme de gestion</p>
-          <p class="card__body">
-            Développement d’une plateforme pour le suivi administratif, des bénéficiaires et du
-            volet médical. Objectif&nbsp;: offrir un outil simple, fiable et utile aux acteurs de
-            terrain.
-          </p>
+        <!-- Compétences -->
+        <div class="experience__skills">
+          <span *ngFor="let skill of exp.skills" 
+                class="experience__skill"
+                [style.background-color]="exp.color + '20'"
+                [style.color]="exp.color">
+            {{ skill }}
+          </span>
         </div>
+
+        <!-- Indicateur visuel -->
+        <div class="experience__indicator" [style.background-color]="exp.color"></div>
       </div>
+    </div>
+
+    <!-- Animation de fond -->
+    <div class="experience__bg-animation">
+      <div class="experience__bg-line" *ngFor="let line of [1,2,3,4]" 
+           [style.animation-delay]="(line * 0.5) + 's'"></div>
     </div>
   </div>
 </section>

@@ -1,4 +1,4 @@
-<section class="section">
+<section class="section services__section">
   <div class="container">
     <p class="section__title">Services</p>
     <h2 class="section__subtitle">Ce que je peux construire pour vous</h2>
@@ -7,71 +7,41 @@
       visuel. Chaque projet est pensé pour être propre dans le code et agréable à utiliser.
     </p>
 
-    <div class="services__grid">
-      <article class="card services__card">
-        <div class="services__icon services__icon--web">&lt;/&gt;</div>
-        <h3 class="card__title">Développement Web</h3>
-        <p class="card__meta">Sites et applications responsives</p>
-        <p class="card__body">
-          Création de sites et d’applications web modernes avec une base solide en Java, C#, Python
-          et les frameworks front/back adaptés. Code propre, interfaces responsives et accessibles.
-        </p>
-        <div class="services__tags">
-          <span class="pill">Angular</span>
-          <span class="pill">HTML · CSS · TypeScript</span>
-          <span class="pill">Django</span>
-          <span class="pill">Java</span>
-          <span class="pill">C#</span>
+    <!-- Services animés comme des boules -->
+    <div class="services__container">
+      <div *ngFor="let service of services; let i = index" 
+           class="services__ball"
+           [style.animation-delay]="(i * 1) + 's'"
+           [style.background]="service.color + '15'"
+           [style.borderColor]="service.color + '40'">
+        
+        <!-- Icône flottante -->
+        <div class="services__floating-icon" 
+             [style.background]="service.color"
+             [style.animation-delay]="(i * 1 + 0.3) + 's'">
+          <span class="services__icon-text">{{ service.icon }}</span>
         </div>
-      </article>
 
-      <article class="card services__card">
-        <div class="services__icon services__icon--mobile">📱</div>
-        <h3 class="card__title">Applications mobiles</h3>
-        <p class="card__meta">Expériences natives & hybrides</p>
-        <p class="card__body">
-          Développement d’applications mobiles avec Flutter et React Native, centrées sur la
-          simplicité d’usage et la performance.
-        </p>
-        <div class="services__tags">
-          <span class="pill">Flutter · Dart</span>
-          <span class="pill">React Native</span>
-          <span class="pill">UI mobile</span>
+        <!-- Contenu -->
+        <div class="services__content">
+          <h3 class="services__title">{{ service.title }}</h3>
+          <p class="services__meta">{{ service.meta }}</p>
+          <p class="services__description">{{ service.description }}</p>
+          
+          <!-- Tags -->
+          <div class="services__tags">
+            <span *ngFor="let tag of service.tags" 
+                  class="services__tag"
+                  [style.background-color]="service.color + '20'"
+                  [style.color]="service.color">
+              {{ tag }}
+            </span>
+          </div>
         </div>
-      </article>
 
-      <article class="card services__card">
-        <div class="services__icon services__icon--api">API</div>
-        <h3 class="card__title">API REST & intégration</h3>
-        <p class="card__meta">Backends connectés à vos interfaces</p>
-        <p class="card__body">
-          Conception d’API REST pour connecter frontends Angular à des backends Node, Django ou
-          autres services, avec une structure claire et documentée.
-        </p>
-        <div class="services__tags">
-          <span class="pill">API REST</span>
-          <span class="pill">Node.js</span>
-          <span class="pill">Django</span>
-          <span class="pill">SQL Server</span>
-          <span class="pill">Odoo</span>
-        </div>
-      </article>
-
-      <article class="card services__card">
-        <div class="services__icon services__icon--design">✏️</div>
-        <h3 class="card__title">Design & identité visuelle</h3>
-        <p class="card__meta">Interfaces qui racontent une histoire</p>
-        <p class="card__body">
-          Création de maquettes et visuels avec Figma et Photoshop&nbsp;: identités graphiques,
-          mini-branding pour projets, visuels pour le web et les réseaux sociaux.
-        </p>
-        <div class="services__tags">
-          <span class="pill">Figma</span>
-          <span class="pill">Photoshop</span>
-          <span class="pill">Content creation</span>
-          <span class="pill">UI design</span>
-        </div>
-      </article>
+        <!-- Effet de brillance -->
+        <div class="services__shine" [style.background]="service.color + '30'"></div>
+      </div>
     </div>
   </div>
 </section>

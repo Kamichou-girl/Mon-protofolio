@@ -1,17 +1,222 @@
 .about__layout {
   align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.about__section {
+  position: relative;
+  overflow: hidden;
 }
 
 .section__title {
   color: #a855f7;
 }
 
+/* Bande colorée animée */
+.about__color-band {
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  width: 120%;
+  height: 8px;
+  display: flex;
+  z-index: 1;
+  animation: bandMove 8s linear infinite;
+  transform: translateY(-50%);
+}
+
+.about__band-segment {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.about__band-segment::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  animation: bandShine 3s ease-in-out infinite;
+}
+
+.about__band-segment--1 {
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+}
+
+.about__band-segment--1::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation-delay: 0s;
+}
+
+.about__band-segment--2 {
+  background: linear-gradient(90deg, #a78bfa, #8b5cf6);
+}
+
+.about__band-segment--2::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation-delay: 0.6s;
+}
+
+.about__band-segment--3 {
+  background: linear-gradient(90deg, #f472b6, #ec4899);
+}
+
+.about__band-segment--3::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation-delay: 1.2s;
+}
+
+.about__band-segment--4 {
+  background: linear-gradient(90deg, #34d399, #10b981);
+}
+
+.about__band-segment--4::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation-delay: 1.8s;
+}
+
+.about__band-segment--5 {
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+}
+
+.about__band-segment--5::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation-delay: 2.4s;
+}
+
+@keyframes bandMove {
+  0% {
+    transform: translateY(-50%) translateX(-100%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(100%);
+  }
+}
+
+@keyframes bandShine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Bandes verticales à droite */
+.about__vertical-bands {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+.about__vertical-band {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.about__vertical-segment {
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  bottom: -100%;
+  border-radius: 3px;
+  animation: verticalMove 4s ease-in-out infinite;
+}
+
+.about__vertical-band--1 .about__vertical-segment {
+  animation-delay: 0s;
+}
+
+.about__vertical-band--2 .about__vertical-segment {
+  animation-delay: 0.8s;
+}
+
+.about__vertical-band--3 .about__vertical-segment {
+  animation-delay: 1.6s;
+}
+
+.about__vertical-band--4 .about__vertical-segment {
+  animation-delay: 2.4s;
+}
+
+.about__vertical-band--5 .about__vertical-segment {
+  animation-delay: 3.2s;
+}
+
+@keyframes verticalMove {
+  0% {
+    bottom: -100%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+
 .about__meta {
   border-color: rgba(168, 85, 247, 0.35);
+  position: relative;
+  z-index: 2;
 }
 
 .about__text + .about__text {
   margin-top: 0.9rem;
+}
+
+/* Effet arc-en-ciel pour les textes */
+.about__text--rainbow {
+  background: linear-gradient(
+    90deg,
+    #60a5fa 0%,
+    #a78bfa 20%,
+    #f472b6 40%,
+    #34d399 60%,
+    #fbbf24 80%,
+    #60a5fa 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 4s ease-in-out infinite;
+  font-weight: 500;
+}
+
+.about__text--rainbow em {
+  font-style: italic;
+}
+
+@keyframes rainbowText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .about__meta {
@@ -41,6 +246,19 @@
 
   .about__meta {
     width: 100%;
+  }
+
+  .about__vertical-bands {
+    right: 2%;
+    width: 40px;
+  }
+
+  .about__vertical-band {
+    height: 4px;
+  }
+
+  .about__color-band {
+    height: 6px;
   }
 }
 

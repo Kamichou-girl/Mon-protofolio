@@ -26,11 +26,11 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "outputMode": "static"
+            "scripts": []
           },
           "configurations": {
             "production": {
+              "baseHref": "/",
               "budgets": [
                 {
                   "type": "initial",
@@ -43,11 +43,7 @@
                   "maximumError": "12kb"
                 }
               ],
-              "outputHashing": "all",
-              "optimization": true,
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,
