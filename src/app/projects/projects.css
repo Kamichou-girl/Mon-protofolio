@@ -160,7 +160,9 @@
   gap: 0.8rem;
   height: 100%;
   overflow: hidden;
-  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.75);
 }
 
 .projects__card::before {
@@ -178,7 +180,7 @@
 }
 
 .projects__card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px) scale(1.05);
   border-color: rgba(37, 99, 235, 0.5);
   box-shadow: 0 26px 70px rgba(15, 23, 42, 0.85);
 }
@@ -275,6 +277,7 @@
 .projects__key-text {
   font-size: 0.9rem;
   color: #d1d5db;
+  word-break: break-word;
 }
 
 .projects__tags {
@@ -299,6 +302,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
+}
+
+/* Support éventuel pour les images de projets */
+.projects__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.9rem;
+  display: block;
 }
 
 /* Responsive */

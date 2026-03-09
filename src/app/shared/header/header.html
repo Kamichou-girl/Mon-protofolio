@@ -1,10 +1,24 @@
-<header class="header">
+<header class="header" [class.header--scrolled]="isScrolled">
   <div class="container">
-    <a class="brand" href="#home" (click)="scrollTo('home', $event)">
-      <span class="brand__name">Portfolio</span>
-    </a>
+    <div class="header__bar">
+      <a class="brand" href="#home" (click)="scrollTo('home', $event)">
+        <span class="brand__name">Portfolio</span>
+      </a>
 
-    <nav class="nav">
+      <button
+        class="header__toggle"
+        type="button"
+        aria-label="Ouvrir le menu de navigation"
+        [attr.aria-expanded]="isMenuOpen"
+        (click)="toggleMenu()"
+      >
+        <span class="header__toggle-line"></span>
+        <span class="header__toggle-line"></span>
+        <span class="header__toggle-line"></span>
+      </button>
+    </div>
+
+    <nav class="nav" [class.nav--open]="isMenuOpen">
       <a class="nav__link" href="#home" (click)="scrollTo('home', $event)">Accueil</a>
       <a class="nav__link" href="#about" (click)="scrollTo('about', $event)">À propos</a>
       <a class="nav__link" href="#services" (click)="scrollTo('services', $event)">Services</a>

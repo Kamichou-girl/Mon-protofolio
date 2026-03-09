@@ -3,40 +3,13 @@
     <p class="section__title">Projets</p>
     <h2 class="section__subtitle">Mes réalisations principales</h2>
 
-    <!-- État initial : boules cliquables -->
-    <div *ngIf="!showProjects && !loading && !error" class="projects__balls-container">
-      <div class="projects__intro-text">
-        <h3 class="projects__intro-title">Voir mes projets</h3>
-        <p class="projects__intro-description">Cliquez sur les boules ci-dessous pour découvrir mes réalisations</p>
-      </div>
-      
-      <div class="projects__balls">
-        <div *ngFor="let project of projects; let i = index" 
-             class="projects__ball"
-             [style.background]="getProjectColor(i) + '20'"
-             [style.borderColor]="getProjectColor(i)"
-             [style.animation-delay]="(i * 0.2) + 's'"
-             (click)="showProjectsList()">
-          <div class="projects__ball-icon" [style.background]="getProjectColor(i)">
-            <span class="projects__ball-number">{{ i + 1 }}</span>
-          </div>
-          <div class="projects__ball-shine"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- État chargement -->
-    <div *ngIf="loading" class="projects__status">
-      <p>Chargement des projets...</p>
-    </div>
-
     <!-- État erreur -->
     <div *ngIf="error" class="projects__status projects__status--error">
       {{ error }}
     </div>
 
-    <!-- Grille des projets (après clic) -->
-    <div *ngIf="showProjects && !error && projects.length" class="projects__grid">
+    <!-- Grille des projets -->
+    <div *ngIf="!error && projects.length" class="projects__grid">
       <article *ngFor="let p of projects; let i = index" class="card projects__card" 
                [class.projects__card--color-1]="i % 5 === 0" 
                [class.projects__card--color-2]="i % 5 === 1" 
